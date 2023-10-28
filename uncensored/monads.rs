@@ -39,7 +39,7 @@ fn addOne(x: i64) -> NumWithLogs {
 }
 
 fn main() {
-    let a = NumWithLogs::new(4);    
+    let mut a = NumWithLogs::new(4);    
     println!("{:?}", a);
     let b = run(a, &square);
     println!("{:?}", b);
