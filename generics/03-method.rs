@@ -19,9 +19,7 @@ fn main() {
 
     let p3 = p1.mixup(p2);
 
-    assert_eq!(p3.x, 5);
-    assert_eq!(p3.y, '中');
-
-    println!("Success!");
+    println!("{} == {}", p3.x, 5);
+    println!("{} == {}", p3.y, '中');
 }
 

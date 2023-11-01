@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Array<T, const N: usize> {
     data : [T; N]
 }
@@ -15,6 +16,6 @@ fn main() {
         }
     ];
 
-    println!("Success!");
+    println!("{:?}", arrays);
 }
 
