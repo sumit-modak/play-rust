@@ -15,7 +15,7 @@ fn my_chain() {
 
 fn my_all() {
     let v = [2, 4, 6, 8, 10];
-    if v.iter().all(|k| *k%2==0) {
+    if v.iter().all(|k| *k % 2 == 0) {
         println!("all even :)");
     } else {
         println!("not all even");
@@ -24,7 +24,7 @@ fn my_all() {
 
 fn my_any() {
     let v = [12, 53, 327, 23, 298, 28];
-    if v.iter().any(|k| *k>100) {
+    if v.iter().any(|k| *k > 100) {
         println!("Some are above 100");
     } else {
         println!("All are below 100");

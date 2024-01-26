@@ -1,5 +1,4 @@
 #[derive(Debug)]
-
 struct SomeStruct {
     num: i32
 }

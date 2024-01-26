@@ -51,6 +51,10 @@ fn main() {
             name: String::from("Swarnali"),
             subject: String::from("Physics"),
         }
+        Teacher {
+            name: String::from("Bharati"),
+            subject: String::from("Biology"),
+        }
     ];
     println!("{:?} \n {:?}", students, teachers);    
 }
