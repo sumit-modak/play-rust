@@ -5,14 +5,9 @@ fn main() {
 
     let slice2 = &s[7..10]; // Tips: `中`  takes 3 bytes in UTF8 format
     assert_eq!(slice2, "世");
-    
+
     // Iterate through all chars in s
     for (i, c) in s.chars().enumerate() {
-        if i == 7 {
-            assert_eq!(c, '世')
-        }
+        println!("{i} {c}");
     }
-
-    println!("Success!");
 }
-
