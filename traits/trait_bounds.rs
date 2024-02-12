@@ -1,5 +1,3 @@
-
-// FIX the errors.
 struct Pair<T> {
     x: T,
     y: T,
@@ -7,10 +5,7 @@ struct Pair<T> {
 
 impl<T> Pair<T> {
     fn new(x: T, y: T) -> Self {
-        Self {
-            x,
-            y,
-        }
+        Self { x, y }
     }
 }
 
@@ -27,15 +22,15 @@ impl<T: std::fmt::Debug + PartialOrd> Pair<T> {
 #[derive(Debug, PartialOrd, PartialEq)]
 struct Unit(i32);
 
-fn main() {
-    let p1 = Pair{
-        x: Unit(1),
-        y: Unit(3)
-    };
-    
-    let p2 = Pair::new(Unit(1), Unit(2));
-    
-    p1.cmp_display();
-    p2.cmp_display();
-}
+struct Test(u32, u32, u32);
 
+fn main() {
+    let p2 = Pair::new(Unit(1), Unit(2));
+    let p3 = Pair::new(Test(1, 2, 3), Test(3, 2, 1));
+
+    p2.cmp_display();
+    // this will not work because Test struct does not impls
+    // Debug, PartialEq and PartialOrd traits which is required
+    // to implement cmp_display function
+    // p3.cmp_display();
+}
