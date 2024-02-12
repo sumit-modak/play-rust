@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 #[derive(Debug)]
 struct Point {
     x: u64,
@@ -34,6 +35,13 @@ fn foo(p: &dyn Iterator<Output = u64>) {
     println!("{:?}", p);
 }
 
+// this worked because rust compiler can figure out the
+// associated type related to the trait implementation
+// also adding <Output = u64> will not cause an error
+fn bar(p: &impl Iterator) {
+    println!("{:?}", p);
+}
+
 fn main() {
     let p = Point {
         x: 12,
@@ -41,4 +49,5 @@ fn main() {
         z: 34,
     };
     foo(&p);
+    bar(&p);
 }

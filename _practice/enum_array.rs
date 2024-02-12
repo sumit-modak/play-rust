@@ -1,10 +1,10 @@
 #[derive(Debug)]
 enum Boolean {
-    True, 
-    False
+    True,
+    False,
 }
 
 fn main() {
     let a: [Boolean; 2] = [Boolean::True, Boolean::False];
-    println!("{:#?}", a);
+    println!("{:?}", a);
 }
