@@ -29,3 +29,7 @@ impl<T> Cell<T> {
         unsafe { *self.value.get() }
     }
 }
+
+// CONCLUSION:
+// dont give out references to the inner type
+// gives out copy of the inner type if the type implements copy

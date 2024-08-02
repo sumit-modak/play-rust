@@ -11,3 +11,11 @@
   - [Subtyping & Variance](https://www.youtube.com/watch?v=iVYWDIW71jk&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=8)
   - [Smart Pointers & Interior Mutability](https://www.youtube.com/watch?v=8O0Nt9qY_vo&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa)
   - [The Drop Check](https://www.youtube.com/watch?v=TJOFSMpJdzg&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=9)
+- Step 4: Threading
+  - [Send, Sync and their implementors](https://www.youtube.com/watch?v=yOezcP-XaIw&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=14)
+  - [Atomics and Memory Ordering](https://www.youtube.com/watch?v=rMGWeSjctlY&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=9)
+  - [Channels](https://www.youtube.com/watch?v=b4mS5UPHh20&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=5)
+- Step 5: Async/Await
+  - [An article on how async works](https://conradludgate.com/posts/async)
+  - [Async/Await](https://www.youtube.com/watch?v=ThjvMReOXYM&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=11)
+  - [Decrusting Tokio Crate](https://www.youtube.com/watch?v=o2ob8zkeq2s&list=PLqbS7AVVErFirH9armw8yXlE6dacF-A6z)
