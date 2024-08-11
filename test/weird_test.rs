@@ -5,10 +5,10 @@ struct MutStr<'a, 'b> {
 fn main() {
     let mut s = "hello";
 
-    *MutStr { s: &mut s }.s = "world";
+    // *MutStr { s: &mut s }.s = "world";
     // the above line can be written as
-    // let m = MutStr { s: &mut s };
-    // let *m.s = "world";
+    let m = MutStr { s: &mut s };
+    *m.s = "world";
 
     println!("{s}");
 }

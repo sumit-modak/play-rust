@@ -1,1 +1,2 @@
-async/my-redis/
+async/oneshot-test/target/
+async/watch-test/target/
