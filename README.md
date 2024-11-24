@@ -11,6 +11,7 @@
   - [Subtyping & Variance](https://www.youtube.com/watch?v=iVYWDIW71jk&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=8)
   - [Smart Pointers & Interior Mutability](https://www.youtube.com/watch?v=8O0Nt9qY_vo&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa)
   - [The Drop Check](https://www.youtube.com/watch?v=TJOFSMpJdzg&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=9)
+  - [Declarative Macros](https://www.youtube.com/watch?v=q6paRBbLgNw&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=2)
 - Step 4: Threading
   - [Send, Sync and their implementors](https://www.youtube.com/watch?v=yOezcP-XaIw&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=14)
   - [Atomics and Memory Ordering](https://www.youtube.com/watch?v=rMGWeSjctlY&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa&index=9)

