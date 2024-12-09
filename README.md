@@ -27,5 +27,4 @@ Pending:
   - Iterators
   - Sorting Algorithms
   - Service Trait
-  - declarative macros (macro_rules!)
   - procedural macros (3 types) (https://www.youtube.com/playlist?list=PLqbS7AVVErFgwC_HByFYblghsDsD5wZDv)
