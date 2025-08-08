@@ -1,12 +1,16 @@
 fn main() {
-    let c1 = || ();
+    let c1 = || {
+        let _x = 0;
+    };
     let c2 = || 2;
     foo(c1);
-    foo(c2); // <-- error
+    bar(c2);
 }
 
 fn foo(f: fn()) {
-    f()
-    // the semicolon can be ignored because f() returns () type
-    // and foo(f: fn()) also returns unit type
+    f();
+}
+
+fn bar(f: fn() -> i32) {
+    f();
 }
